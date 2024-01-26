@@ -1,0 +1,22 @@
+@import "../../../styles/variables";
+
+header {
+  background-color: $color-primary;
+  color: #fff;
+  padding: 8px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+
+  img {
+    width: 70px;
+    height: 65px;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: $font-size /1.8;
+  }
+}
