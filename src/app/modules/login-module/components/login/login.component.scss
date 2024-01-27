@@ -21,6 +21,13 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     border-radius: 5px;
 
+    .error-form {
+      color: $color-alert;
+      font-size: 12px;
+      margin: 0 0 10px;
+      text-align: left;
+    }
+
     input {
       color: $color-primary;
       outline: 0;
@@ -47,6 +54,9 @@
       &:hover {
         background-color: $color-primary-hover;
       }
+      &:disabled {
+      background-color: $color-tertiary;
+    }
 
     }
 

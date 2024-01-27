@@ -1,9 +1,22 @@
 <div class="container">
   <div class="form">
-    <form class="login-form">
-      <input  type="text" name="email" placeholder="E-mail" />
-      <input  type="password" name="password" placeholder="Senha" />
-      <button >login</button>
+    <form [formGroup]="postForm" class="login-form">
+      <input
+        [(ngModel)]="userSignin.email"
+        formControlName="email"
+        type="text" name="email" placeholder="E-mail"/>
+      <div class="error-form" *ngIf="postForm.get('email')?.hasError('required') && postForm.get('email')?.touched">
+        E-mail não informado.
+      </div>
+      <input
+        [(ngModel)]="userSignin.password"
+        formControlName="password"
+        type="password" name="password" placeholder="Senha"/>
+      <div class="error-form"
+           *ngIf="postForm.get('password')?.hasError('required') && postForm.get('password')?.touched">
+        Senha não informada.
+      </div>
+      <button [disabled]="!postForm.valid" (click)="login()">login</button>
     </form>
     <p> Esqueceu a senha ? <a routerLink="recovery-password">Recuperar senha</a></p>
   </div>

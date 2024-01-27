@@ -7,8 +7,7 @@ export abstract class AbstractService<T> {
   constructor(
     private httpClient: HttpClient,
     private baseURL: string,
-    private endpoint: string,
-    private nextEndpoint: string) {
+    private endpoint: string) {
   }
 
   public post(resource: T ): Observable<T> {
@@ -25,7 +24,7 @@ export abstract class AbstractService<T> {
 
   public getListById(id: number): Observable<T[]> {
     return this.httpClient
-      .get<T[]>(`${this.baseURL}/${this.endpoint}/${id}/${this.nextEndpoint}`)
+      .get<T[]>(`${this.baseURL}/${this.endpoint}/${id}`)
       .pipe(map((result) => result));
   }
 
