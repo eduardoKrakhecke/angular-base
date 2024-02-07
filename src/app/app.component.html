@@ -1,3 +1,8 @@
-<app-header [name]="'Sua Saúde'" [logo]="'/assets/images/logo.png'"></app-header>
+<div *ngIf="showMenu()">
+  <app-nav></app-nav>
+</div>
+<div *ngIf="!showMenu()">
+  <app-header [name]="'Sua Saúde'" [logo]="'/assets/images/logo.png'"></app-header>
+</div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

@@ -1,0 +1,14 @@
+@import "../../../styles/variables";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: .7rem;
+  background-color:$color-white;
+  margin: 2rem 0 1.25rem 0;
+  box-shadow: 0 0 0.5rem 0 $color-midium-gray;
+
+  .card-body {
+    padding: 1rem 1.5rem;
+  }
+}

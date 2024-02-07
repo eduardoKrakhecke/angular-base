@@ -7,14 +7,15 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { RecoveryPasswordPageComponent } from './pages/recovery-password-page/recovery-password-page.component';
-
+import { RecoveryPasswordComponent } from './components/recovery-password/recovery-password.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     LoginPageComponent,
-    RecoveryPasswordPageComponent
+    RecoveryPasswordPageComponent,
+    RecoveryPasswordComponent,
   ],
   imports: [
     HttpClientModule,
